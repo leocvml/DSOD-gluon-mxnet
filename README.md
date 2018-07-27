@@ -201,7 +201,25 @@ https://drive.google.com/open?id=1954nyvnEARoi5dWCOEuOAJJEjUBu78a9
 **first make your dataset to .rec 
 you can check my another repo 
 https://github.com/leocvml/mxnet-im2rec_tutorial**
-
+## parameter setting  ##
+```python
+######################################################
+##
+##
+## parameter setting 
+## set image size, batchsize
+## training( without retrain no inference ) : retrain =False, inference =False, epoch = number of epoch
+## training( with retrain and inference after training) : retrain =True, inference =True, inference_Data = name of image, epoch= number
+## only inference ( load weighting and inference) : retrain =True, inference =True, inference_data = name of image, epoch = 0
+#####################################################
+data_shape = 512
+batch_size = 4
+rgb_mean = nd.array([123, 117, 104])
+retrain = True
+inference = True
+inference_data = 'pikachu.jpg'
+epoch = 0
+```
 ## result ##
 **i use pikachu dataset(from gluon tutorial) this result didn't optimization**
 **you can change anchor size ,Bigger network ,Add hidden layer,Long training time,NMS thresholding , hard negative mining etc**
