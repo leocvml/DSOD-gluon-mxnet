@@ -332,8 +332,8 @@ def get_iterators(data_shape, batch_size):
     train_iter = mx.image.ImageDetIter(
         batch_size=batch_size,
         data_shape=(3, data_shape, data_shape),
-        path_imgrec='train.rec',
-        path_imgidx='train.idx',
+        path_imgrec='data/train.rec',
+        path_imgidx='data/train.idx',
         shuffle=True,
         mean=True
     )
@@ -375,7 +375,7 @@ trainer = gluon.Trainer(net.collect_params(),
 cls_metric = metric.Accuracy()
 box_metric = metric.MAE()
 
-filename = 'DSOD.params'
+filename = 'DSOD_params/DSOD.params'
 if retrain:
     print('load last time weighting')
     net.load_params(filename, ctx=mx.gpu())
