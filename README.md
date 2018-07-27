@@ -15,7 +15,7 @@ State-of-the-art object objectors rely heavily on the off-the-shelf networks pre
 
 ## quick start ##
 ```
-1. clone
+1. clone (download)
 2. execution 'getpikachu.py' get dataset
 3. unzip params for model (DSOD_params.rar)
 4. run 'DSOD.py' your will see result( no optimization)
@@ -202,7 +202,7 @@ for k, v in hashes.items():
         print('Downloading', target, url)
         download(url, fname=fname, dirname='data', overwrite=True)
 ```
-https://drive.google.com/open?id=1954nyvnEARoi5dWCOEuOAJJEjUBu78a9
+
 ## how to train your own dataset  ##
 **first make your dataset to .rec 
 you can check my another repo 
