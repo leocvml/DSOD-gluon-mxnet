@@ -13,7 +13,13 @@ Train detection model **from scratch**.
 
 State-of-the-art object objectors rely heavily on the off-the-shelf networks pre-trained on large-scale classification datasets like ImageNet, which incurs learning bias due to the difference on both the loss functions and the category distributions between classification and detection tasks.
 
-
+## quick start ##
+```
+1. clone
+2. execution 'getpikachu.py' get dataset
+3. unzip params for model (DSOD_params.rar)
+4. run 'DSOD.py' your will see result( no optimization)
+```
 
 ## Network Arch ##
 ![](https://i.imgur.com/BW2ze1B.png)
