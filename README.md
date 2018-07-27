@@ -144,22 +144,39 @@ class DSOD(nn.HybridBlock):
 
         return anchors, class_preds, box_preds
 
+net = nn.HybridSequential()
+####################################################
+###
+###  num of  channels in the 1st conv,
+###  num of layer in 1st conv
+###  growth rate,
+###  factor in transition layer)
+###  num_class  ( class + 1)
+###################################################
+with net.name_scope():
+    net.add(
+        DSOD(64,6,48,1,1)   # 64 6 48 1 1
+    )
 
 ```
-## result ##
-**i use pikachu dataset(from gluon tutorial) this result didn't optimization**
-**you can change anchor size ,Bigger network ,Add hidden layer,Long training time,NMS thresholding , hard negative mining etc**
 
 
 
 
 
 ## how to train your own dataset ##
+this repo is training on pikachu dataset, dataset and weighting is on google driver
+
+https://drive.google.com/open?id=1954nyvnEARoi5dWCOEuOAJJEjUBu78a9
 
 first make your dataset to .rec 
 you can check my another repo 
 https://github.com/leocvml/mxnet-im2rec_tutorial
 
+## result ##
+**i use pikachu dataset(from gluon tutorial) this result didn't optimization**
+**you can change anchor size ,Bigger network ,Add hidden layer,Long training time,NMS thresholding , hard negative mining etc**
+![](https://github.com/leocvml/DSOD-gluon-mxnet/blob/master/detection.PNG)
 
 ## learn more .. ##
 you can also see these  tutorial by gluon team,
@@ -167,6 +184,7 @@ Learn more about SSD and other detection model
 
 chinese:
 https://zh.gluon.ai/chapter_computer-vision/ssd.html
+
 english:
 https://gluon.mxnet.io/chapter08_computer-vision/object-detection.html
 
