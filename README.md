@@ -24,7 +24,7 @@ State-of-the-art object objectors rely heavily on the off-the-shelf networks pre
 mxnet 0.11.0
 ```
 ## Network Arch ##
-![](https://i.imgur.com/BW2ze1B.png)
+![](https://i.imgur.com/BW2ze1B.png)![](https://github.com/leocvml/DSOD-gluon-mxnet/blob/master/backbone_fisrthalf.PNG)
 ```python
 ####################################################
 ###
