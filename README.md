@@ -20,7 +20,10 @@ State-of-the-art object objectors rely heavily on the off-the-shelf networks pre
 3. unzip params for model (DSOD_params.rar)
 4. run 'DSOD.py' your will see result( no optimization)
 ```
-
+## Requirements ##
+```
+mxnet 0.11.0
+```
 ## Network Arch ##
 ![](https://i.imgur.com/BW2ze1B.png)
 ```python
@@ -229,7 +232,7 @@ epoch = 0
 ## result ##
 **i use pikachu dataset(from gluon tutorial) this result didn't optimization**
 **you can change anchor size ,Bigger network ,Add hidden layer,Long training time,NMS thresholding , hard negative mining etc**
-![](https://github.com/leocvml/DSOD-gluon-mxnet/blob/master/detection.PNG)
+![](https://github.com/leocvml/DSOD-gluon-mxnet/blob/master/detection2.PNG)
 
 ## learn more .. ##
 you can also see these  tutorial by gluon team,
