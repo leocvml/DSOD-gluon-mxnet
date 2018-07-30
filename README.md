@@ -163,7 +163,7 @@ net = nn.HybridSequential()
 ###################################################
 with net.name_scope():
     net.add(
-        DSOD(64,6,48,1,1)   # 64 6 48 1 1
+        DSOD(32, 6, 48, 1, 1)  # 64 6 48 1 1 in paper
     )
 
 ```
