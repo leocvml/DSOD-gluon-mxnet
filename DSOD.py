@@ -327,7 +327,7 @@ epoch = 0
 
 
 def get_iterators(data_shape, batch_size):
-    class_names = ['dummy', 'pikachu']
+    class_names = ['pikachu']
     num_class = len(class_names)
     train_iter = mx.image.ImageDetIter(
         batch_size=batch_size,
@@ -361,7 +361,7 @@ net = nn.HybridSequential()
 ###################################################
 with net.name_scope():
     net.add(
-        DSOD(64, 6, 48, 1, 1)  # 64 6 48 1 1
+        DSOD(32, 6, 48, 1, 1)  # 64 6 48 1 1
     )
 
 box_loss = SmoothL1Loss()
@@ -375,7 +375,7 @@ trainer = gluon.Trainer(net.collect_params(),
 cls_metric = metric.Accuracy()
 box_metric = metric.MAE()
 
-filename = 'DSOD_params/DSOD.params'
+filename = 'DSOD.params'
 if retrain:
     print('load last time weighting')
     net.load_params(filename, ctx=mx.gpu())
@@ -463,14 +463,14 @@ if inference:
                            '{:s} {:.2f}'.format(text, score),
                            bbox=dict(facecolor=color, alpha=0.5),
                            fontsize=10, color='white')
-        print(time.time() - tic)
+        #print(time.time() - tic)
 
         plt.show()
 
 
     x, im = process_image(inference_data)
     out = predict(x)
-    display(im, out[0], threshold=0.6)
+    display(im, out[0], threshold=0.5)
 
 
 
