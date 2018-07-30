@@ -248,7 +248,8 @@ https://gluon.mxnet.io/chapter08_computer-vision/object-detection.html
 ## Note  ##
 
 this result didn't optimization
-
+**fix bug on 2018/07/30**
+**I appreciate the author's effort in providing a nice experiment in this paper  **
 **very thanks mxnet gluon team, they build the very nice tutorial for everyone**
 
 
